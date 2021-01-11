@@ -1,0 +1,97 @@
+/* CSS Document */
+
+.spaceshiptop {
+	position: absolute;
+	top: calc(25% - 100px);
+	left: calc(80% - 100px);
+  
+} 
+.spaceshiptop img {
+	height: 15vh;
+	width: 15vw;
+	min-width: 150px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	cursor: pointer;
+} 
+
+ 
+
+
+.spaceshipmiddle {
+ 
+	top: calc(42% - 100px);
+	left: calc(78% - 100px);
+	position: absolute; 
+	display: none;  
+	background: radial-gradient(ellipse at center, rgba(0,255,119,0.45) 0%,rgba(255,255,255,0) 100%);
+	border-color: orange;
+	border-style: double;
+	border-width: 18px 25px 30px 15px;
+	border-image: url("./monitor1.png") 10% 10% 16% 6% round;
+ 	background-size: 100% 100%;
+	background-repeat: no-repeat;
+} 
+ 
+.keys:hover{
+	background-color: #828282;
+}
+.keys{
+	font-weight: bold;
+		font-family: 'Space Mono', monospace;
+
+}
+
+.btname
+{
+	
+}
+.myinfo{
+	overflow: auto;
+	white-space: pre-line;
+	color: lawngreen;
+	font-size: 13px;
+	font-weight: bold;
+	font-family: 'Space Mono', monospace;
+	border: none;
+	height:30vh;
+	min-height: 150px;
+	width:18vw;
+	min-width: 180px; 
+	resize: none;
+	outline: none;
+	border-color: Transparent;
+	cursor: not-allowed;
+	box-sizing: border-box;
+	animation: slow 2s ease forwards;
+}
+
+/* scrollbar css */
+::-webkit-scrollbar {
+  width: 2px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 1px rgba(195,101,12,1); 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(195,101,12,1); 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(195,101,12,1); 
+}
+
+
+@media screen and (max-width: 1100px) {
+  .myinfo {
+    font-size:9px;
+  }
+}

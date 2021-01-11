@@ -1,0 +1,71 @@
+ 
+.earth {
+  position: absolute;
+  top: calc(40% - 100px);
+  left: calc(20% - 100px);
+	cursor: none;
+
+}
+.earth img {
+  height: 22vh;
+  width: 22vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+} 
+
+.moon-container {
+  position: absolute;
+  top: calc(40% - 25px);
+  left: calc(20% - 25px);
+}
+
+.moon {
+  -webkit-animation: spin 20s linear infinite;
+          animation: spin 20s linear infinite;
+  background: none; 
+  pointer-events: none;
+  -webkit-transform-origin: 25px;
+          transform-origin: 25px;
+}
+.moon img {
+  -webkit-transform: translateX(-100px) translateY(-160px);
+          transform: translateX(-100px) translateY(-160px);
+  width: 7vh;
+}
+
+.earth img, .moon img {
+  border-radius: 50%;
+  box-shadow: 0 0 12em 1em rgba(110, 140, 200, 0.6);
+}
+
+.earth-demo:hover img, .earth.active img {
+  -webkit-transform: translateX(50px) translateY(-75px) scale(0.5);
+          transform: translateX(50px) translateY(-75px) scale(0.5);
+}
+.earth-demo:hover  .moon-container, .earth.active ~ .moon-container {
+  -webkit-transform: translateX(50px) translateY(-75px) scale(0.4);
+          transform: translateX(50px) translateY(-75px) scale(0.4);
+}
+.earth-demo:hover  .moon-container img, .earth.active ~ .moon-container img {
+  -webkit-transform: translateX(-140px) translateY(-140px);
+          transform: translateX(-140px) translateY(-140px);
+} 
+* {
+  -webkit-transition: all 4s cubic-bezier(0, 1.5, 0.3, 1);
+  transition: all 4s cubic-bezier(0, 1.5, 0.3, 1);
+}
+
+@-webkit-keyframes spin {
+  to {
+    -webkit-transform: rotateZ(360deg);
+            transform: rotateZ(360deg);
+  }
+}
+
+@keyframes spin {
+  to {
+    -webkit-transform: rotateZ(360deg);
+            transform: rotateZ(360deg);
+  }
+}
